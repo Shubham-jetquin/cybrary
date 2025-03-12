@@ -674,7 +674,7 @@ const header = () => {
                                                 tabIndex={0}
                                             >
                                                 <a
-                                                    href="/business"
+                                                    href="/home/business"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                 >
                                                     <img
@@ -716,7 +716,7 @@ const header = () => {
                                                 tabIndex={0}
                                             >
                                                 <a
-                                                    href="/government"
+                                                    href="/home/government"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                 >
                                                     <img
@@ -759,7 +759,7 @@ const header = () => {
                                                 tabIndex={0}
                                             >
                                                 <a
-                                                    href="/industry"
+                                                    href="/home/industry"
                                                     className="nav_dropdown-link_parent w-inline-block"
                                                 >
                                                     <div className="nav_dropdown-icon w-embed">
@@ -808,7 +808,7 @@ const header = () => {
                                                 tabIndex={0}
                                             >
                                                 <a
-                                                    href="/business-resources"
+                                                    href="/home/business-resource"
                                                     className="nav_dropdown-link_parent w-inline-block"
                                                 >
                                                     <img
