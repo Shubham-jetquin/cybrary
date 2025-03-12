@@ -47,7 +47,7 @@ const header = () => {
 
     return <>
         <div>
-            <div className="fixed_wrapper">
+            <div className="fixed_wrapper" >
                 <div
                     cl-close-target="Menu"
                     data-animation="default"
@@ -156,7 +156,7 @@ const header = () => {
                                         <div className="catalog_dropdown-item">
                                             <div className="nav_resources_dropdown is-hover">
                                                 <a
-                                                    href="/career-path"
+                                                    href="/home/career-path"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                     tabIndex={0}
                                                 >
@@ -181,7 +181,7 @@ const header = () => {
                                         <div className="catalog_dropdown-item">
                                             <div className="nav_resources_dropdown is-hover">
                                                 <a
-                                                    href="/skill-paths"
+                                                    href="/home/skill-path"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                     tabIndex={0}
                                                 >
@@ -206,7 +206,7 @@ const header = () => {
                                         <div className="catalog_dropdown-item">
                                             <div className="nav_resources_dropdown is-hover">
                                                 <a
-                                                    href="/certifications"
+                                                    href="/home/certifications"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                     tabIndex={0}
                                                 >
@@ -231,7 +231,7 @@ const header = () => {
                                         <div className="catalog_dropdown-item">
                                             <div className="nav_resources_dropdown is-hover">
                                                 <a
-                                                    href="/mitre-attack"
+                                                    href="/home/mitre-attack"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                     tabIndex={0}
                                                 >
@@ -256,7 +256,7 @@ const header = () => {
                                         <div className="catalog_dropdown-item">
                                             <div className="nav_resources_dropdown is-hover">
                                                 <a
-                                                    href="/catalog"
+                                                    href="/home/catalog"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                     tabIndex={0}
                                                 >
@@ -277,7 +277,7 @@ const header = () => {
                                         <div className="catalog_dropdown-item">
                                             <div className="nav_resources_dropdown is-hover">
                                                 <a
-                                                    href="/instructor"
+                                                    href="/home/instructor"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                     tabIndex={0}
                                                 >
@@ -363,7 +363,7 @@ const header = () => {
                                                 tabIndex={0}
                                             >
                                                 <a
-                                                    href="/free-content"
+                                                    href="/home/free-content"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                 >
                                                     <img
@@ -405,7 +405,7 @@ const header = () => {
                                                 tabIndex={0}
                                             >
                                                 <a
-                                                    href="/cybrary-insider-pro"
+                                                    href="/home/insiderPro"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                 >
                                                     <img
@@ -447,7 +447,7 @@ const header = () => {
                                                 tabIndex={0}
                                             >
                                                 <a
-                                                    href="/success-stories"
+                                                    href="/home/success-stories"
                                                     className="nav_dropdown-link_wrapper w-inline-block"
                                                 >
                                                     <img

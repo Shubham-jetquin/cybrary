@@ -991,6 +991,8 @@ const footer = () => {
                         }}
                     />
                 </div>
+
+                {/* POPup if user not logedIn */}
                 <div className="padding-global">
                     <div className="container-large">
                         <div className="padding-section-120">
@@ -1333,11 +1335,13 @@ const footer = () => {
                         </div>
                     </div>
                 </div>
+
                 <div
                     data-w-id="7ebe0b2d-fa1a-4f45-c31c-1af397dad262"
                     className="modal_background"
                 />
             </div>
+            
             <div cb-element="alert-component" className="common_alert">
                 <div className="padding-global">
                     <div className="container-large">
