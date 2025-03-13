@@ -39,7 +39,7 @@ const careerPath = () => {
                                                 Start Learning for Free
                                             </a>
                                             <a
-                                                href="/home/business"
+                                                href="/business"
                                                 className="button is-alternate is-no-outline w-inline-block"
                                             >
                                                 <div>Cybrary for Business</div>
@@ -75,7 +75,7 @@ const careerPath = () => {
                                                 Start Learning for Free
                                             </a>
                                             <a
-                                                href="/home/business"
+                                                href="/business"
                                                 className="button-5 is-alternate is-no-outline w-inline-block"
                                             >
                                                 <div>Cybrary for Business</div>
