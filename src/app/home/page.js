@@ -1,8 +1,30 @@
 'use client';
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+
 const HomePage = () => {
     const marqueeRef = useRef(null);
+
+    const [activeTab, setActiveTab] = useState("Learn");
+    const [isOpen, setIsOpen] = useState(false);
+
+    const tabs = [
+        {
+            name: "Learn",
+            content: "Study core concepts and get hands-on with key skills in cybersecurity courses and labs led by industry experts.",
+            imgSrc: "https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f09c8e94e1cb37b8d2c_HP-Learn.png"
+        },
+        {
+            name: "Practice",
+            content: "Exercise your problem-solving and creative thinking skills with interactive labs and security-centric puzzles.",
+            imgSrc: "https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f2281175b35013c1009_HP-Practice.png"
+        },
+        {
+            name: "Prove",
+            content: "Demonstrate your mastery of key topics in assessments and practice tests.",
+            imgSrc: "https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f33ff9ebf112f5a2d8c_HP-Prove.png"
+        }
+    ];
 
     useEffect(() => {
         gsap.to(marqueeRef.current, {
@@ -434,253 +456,106 @@ const HomePage = () => {
                                     className="left-align-tabs_tabs-menu w-tab-menu"
                                     role="tablist"
                                 >
-                                    <a
-                                        data-w-tab="Learn"
-                                        className="left-align-tabs_tabs-link w-inline-block w-tab-link w--current"
-                                        id="w-tabs-0-data-w-tab-0"
-                                        href="#w-tabs-0-data-w-pane-0"
-                                        role="tab"
-                                        aria-controls="w-tabs-0-data-w-pane-0"
-                                        aria-selected="true"
-                                    >
-                                        <div className="left-align-tabs_item">
-                                            <div className="left-align-tabs_item-heading">
-                                                <div className="left-align-tabs_active-indicator" />
-                                                <h3 className="is-mobile-h2">Learn</h3>
-                                                <div className="left-align-tabs_arrow w-embed">
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        width="100%"
-                                                        height="100%"
-                                                        viewBox="0 0 8 15"
-                                                        fill="none"
-                                                        preserveAspectRatio="xMidYMid meet"
-                                                        aria-hidden="true"
-                                                        role="img"
-                                                    >
-                                                        <path
-                                                            d="M0.999999 1L6.54692 6.42935C7.15103 7.02065 7.15103 7.97935 6.54692 8.57065L1 14"
-                                                            stroke="currentColor"
-                                                        />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div className="left-align-tabs_link-content">
-                                                <p>
-                                                    Study core concepts and get hands-on with key skills in
-                                                    cybersecurity courses and labs led by industry experts.
-                                                </p>
-                                                <div
-                                                    cb-element="trigger-register-modal"
-                                                    className="button is-link is-icon"
-                                                >
-                                                    <div>Get Started</div>
-                                                    <div className="icon-embed-custom w-embed">
+                                    {tabs.map((tab,index) => (
+                                        <a
+                                            data-w-tab="Learn"
+                                            key={index}
+                                            className={`left-align-tabs_tabs-link w-inline-block w-tab-link ${activeTab === tab.name ? "w--current" : ""}`}
+                                            id="w-tabs-0-data-w-tab-0"
+
+                                            role="tab"
+                                            aria-controls="w-tabs-0-data-w-pane-0"
+                                            aria-selected={activeTab === tab.name}
+                                            onClick={() => {
+                                                setActiveTab(tab.name);
+                                                setIsOpen(true);
+                                            }}
+                                        >
+                                            <div className="left-align-tabs_item">
+                                                <div className="left-align-tabs_item-heading">
+                                                    <div className="left-align-tabs_active-indicator" />
+                                                    <h3 className="is-mobile-h2">{tab.name}</h3>
+                                                    <div className="left-align-tabs_arrow w-embed">
                                                         <svg
                                                             xmlns="http://www.w3.org/2000/svg"
                                                             width="100%"
                                                             height="100%"
-                                                            viewBox="0 0 5 8"
+                                                            viewBox="0 0 8 15"
                                                             fill="none"
                                                             preserveAspectRatio="xMidYMid meet"
                                                             aria-hidden="true"
                                                             role="img"
                                                         >
                                                             <path
-                                                                d="M1 1L3.50585 3.50585C3.77876 3.77876 3.77876 4.22124 3.50585 4.49415L1 7"
+                                                                d="M0.999999 1L6.54692 6.42935C7.15103 7.02065 7.15103 7.97935 6.54692 8.57065L1 14"
                                                                 stroke="currentColor"
                                                             />
                                                         </svg>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a
-                                        data-w-tab="Practice"
-                                        className="left-align-tabs_tabs-link w-inline-block w-tab-link"
-                                        tabIndex={-1}
-                                        id="w-tabs-0-data-w-tab-1"
-                                        href="#w-tabs-0-data-w-pane-1"
-                                        role="tab"
-                                        aria-controls="w-tabs-0-data-w-pane-1"
-                                        aria-selected="false"
-                                    >
-                                        <div className="left-align-tabs_item">
-                                            <div className="left-align-tabs_item-heading">
-                                                <div className="left-align-tabs_active-indicator" />
-                                                <h3 className="is-mobile-h2">Practice</h3>
-                                                <div className="left-align-tabs_arrow w-embed">
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        width="100%"
-                                                        height="100%"
-                                                        viewBox="0 0 8 15"
-                                                        fill="none"
-                                                        preserveAspectRatio="xMidYMid meet"
-                                                        aria-hidden="true"
-                                                        role="img"
-                                                    >
-                                                        <path
-                                                            d="M0.999999 1L6.54692 6.42935C7.15103 7.02065 7.15103 7.97935 6.54692 8.57065L1 14"
-                                                            stroke="currentColor"
-                                                        />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div className="left-align-tabs_link-content">
-                                                <p>
-                                                    Exercise your problem-solving and creative thinking skills
-                                                    with interactive labs and security-centric puzzles.
-                                                </p>
-                                                <div
-                                                    cb-element="trigger-register-modal"
-                                                    className="button is-link is-icon"
-                                                >
-                                                    <div>Get Started</div>
-                                                    <div className="icon-embed-custom w-embed">
-                                                        <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            width="100%"
-                                                            height="100%"
-                                                            viewBox="0 0 5 8"
-                                                            fill="none"
-                                                            preserveAspectRatio="xMidYMid meet"
-                                                            aria-hidden="true"
-                                                            role="img"
+
+                                                {isOpen && activeTab === tab.name &&
+                                                    <div className="left-align-tabs_link-content" style={{ display: "block" }}>
+                                                        <p>
+                                                            {tab.content}
+                                                        </p>
+                                                        <div
+                                                            cb-element="trigger-register-modal"
+                                                            className="button is-link is-icon"
                                                         >
-                                                            <path
-                                                                d="M1 1L3.50585 3.50585C3.77876 3.77876 3.77876 4.22124 3.50585 4.49415L1 7"
-                                                                stroke="currentColor"
-                                                            />
-                                                        </svg>
+                                                            <div>Get Started</div>
+                                                            <div className="icon-embed-custom w-embed">
+                                                                <svg
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    width="100%"
+                                                                    height="100%"
+                                                                    viewBox="0 0 5 8"
+                                                                    fill="none"
+                                                                    preserveAspectRatio="xMidYMid meet"
+                                                                    aria-hidden="true"
+                                                                    role="img"
+                                                                >
+                                                                    <path
+                                                                        d="M1 1L3.50585 3.50585C3.77876 3.77876 3.77876 4.22124 3.50585 4.49415L1 7"
+                                                                        stroke="currentColor"
+                                                                    />
+                                                                </svg>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                }
+
                                             </div>
-                                        </div>
-                                    </a>
-                                    <a
-                                        data-w-tab="Prove"
-                                        className="left-align-tabs_tabs-link is-last w-inline-block w-tab-link"
-                                        tabIndex={-1}
-                                        id="w-tabs-0-data-w-tab-2"
-                                        href="#w-tabs-0-data-w-pane-2"
-                                        role="tab"
-                                        aria-controls="w-tabs-0-data-w-pane-2"
-                                        aria-selected="false"
-                                    >
-                                        <div className="left-align-tabs_item">
-                                            <div className="left-align-tabs_item-heading">
-                                                <div className="left-align-tabs_active-indicator" />
-                                                <h3 className="is-mobile-h2">Prove</h3>
-                                                <div className="left-align-tabs_arrow w-embed">
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        width="100%"
-                                                        height="100%"
-                                                        viewBox="0 0 8 15"
-                                                        fill="none"
-                                                        preserveAspectRatio="xMidYMid meet"
-                                                        aria-hidden="true"
-                                                        role="img"
-                                                    >
-                                                        <path
-                                                            d="M0.999999 1L6.54692 6.42935C7.15103 7.02065 7.15103 7.97935 6.54692 8.57065L1 14"
-                                                            stroke="currentColor"
-                                                        />
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div className="left-align-tabs_link-content">
-                                                <p>
-                                                    Demonstrate your mastery of key topics in assessments and
-                                                    practice tests.
-                                                </p>
-                                                <div
-                                                    cb-element="trigger-register-modal"
-                                                    className="button is-link is-icon"
-                                                >
-                                                    <div>Get Started</div>
-                                                    <div className="icon-embed-custom w-embed">
-                                                        <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            width="100%"
-                                                            height="100%"
-                                                            viewBox="0 0 5 8"
-                                                            fill="none"
-                                                            preserveAspectRatio="xMidYMid meet"
-                                                            aria-hidden="true"
-                                                            role="img"
-                                                        >
-                                                            <path
-                                                                d="M1 1L3.50585 3.50585C3.77876 3.77876 3.77876 4.22124 3.50585 4.49415L1 7"
-                                                                stroke="currentColor"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
+                                        </a>
+                                    ))}
+
                                 </div>
                                 <div
                                     id="w-node-_5d49be10-4b7c-fc21-8feb-3dde55e4738b-b89a688c"
                                     className="tabs-content w-tab-content"
                                 >
-                                    <div
-                                        data-w-tab="Learn"
-                                        className="left-align-tabs_tab-pane w-tab-pane w--tab-active"
-                                        id="w-tabs-0-data-w-pane-0"
-                                        role="tabpanel"
-                                        aria-labelledby="w-tabs-0-data-w-tab-0"
-                                    >
-                                        <div className="left-align-tabs_content-wrapper">
-                                            <img
-                                                width={2424}
-                                                height={1926}
-                                                alt=""
-                                                src="https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f09c8e94e1cb37b8d2c_HP-Learn.png"
-                                                loading="lazy"
-                                                className="left-align-tabs_image in-tabs"
-                                            />
+                                    {tabs.map((tab,index) => (
+                                        <div
+                                        key={index}
+                                            data-w-tab="Learn"
+                                            className="left-align-tabs_tab-pane w-tab-pane w--tab-active"
+                                            id="w-tabs-0-data-w-pane-0"
+                                            role="tabpanel"
+                                            aria-labelledby="w-tabs-0-data-w-tab-0"
+                                        >
+                                            <div className={`left-align-tabs_tab-pane w-tab-pane ${activeTab === tab.name ? "w--tab-active" : ""}`} key={tab.name}>
+                                                <img
+                                                    width={2424}
+                                                    height={1926}
+                                                    src={tab.imgSrc} alt={tab.name}
+                                                    loading="lazy"
+                                                    className="left-align-tabs_image in-tabs"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div
-                                        data-w-tab="Practice"
-                                        className="left-align-tabs_tab-pane w-tab-pane"
-                                        id="w-tabs-0-data-w-pane-1"
-                                        role="tabpanel"
-                                        aria-labelledby="w-tabs-0-data-w-tab-1"
-                                    >
-                                        <div className="left-align-tabs_content-wrapper">
-                                            <img
-                                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 87vw, (max-width: 991px) 55vw, 48vw"
-                                                srcSet="https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f2281175b35013c1009_HP-Practice-p-500.png 500w, https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f2281175b35013c1009_HP-Practice-p-800.png 800w, https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f2281175b35013c1009_HP-Practice-p-1080.png 1080w, https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f2281175b35013c1009_HP-Practice-p-1600.png 1600w, https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f2281175b35013c1009_HP-Practice-p-2000.png 2000w, https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f2281175b35013c1009_HP-Practice.png 2424w"
-                                                alt=""
-                                                src="https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f2281175b35013c1009_HP-Practice.png"
-                                                loading="lazy"
-                                                className="left-align-tabs_image in-tabs"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div
-                                        data-w-tab="Prove"
-                                        className="left-align-tabs_tab-pane w-tab-pane"
-                                        id="w-tabs-0-data-w-pane-2"
-                                        role="tabpanel"
-                                        aria-labelledby="w-tabs-0-data-w-tab-2"
-                                    >
-                                        <div className="left-align-tabs_content-wrapper">
-                                            <img
-                                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 87vw, (max-width: 991px) 55vw, 48vw"
-                                                srcSet="https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f33ff9ebf112f5a2d8c_HP-Prove-p-500.png 500w, https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f33ff9ebf112f5a2d8c_HP-Prove-p-800.png 800w, https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f33ff9ebf112f5a2d8c_HP-Prove-p-1080.png 1080w, https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f33ff9ebf112f5a2d8c_HP-Prove-p-1600.png 1600w, https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f33ff9ebf112f5a2d8c_HP-Prove-p-2000.png 2000w, https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f33ff9ebf112f5a2d8c_HP-Prove.png 2424w"
-                                                alt=""
-                                                src="https://cdn.prod.website-files.com/63eef15e3ff8fd318e9a6888/66972f33ff9ebf112f5a2d8c_HP-Prove.png"
-                                                loading="lazy"
-                                                className="left-align-tabs_image in-tabs"
-                                            />
-                                        </div>
-                                    </div>
+                                    ))}
+
+
                                 </div>
                             </div>
                         </div>

@@ -5,7 +5,7 @@ const businessResource = () => {
                 <div className="padding-global">
                     <div className="padding-section-150">
                         <div className="text-align-center">
-                            <div className="max-width-medium align-center">
+                            <div className="max-width-medium align-center" style={{display:'flex', flexDirection:'column'}}>
                                 <div className="margin-bottom margin-xsmall-2">
                                     <div className="label">CYBRARY RESOURCES</div>
                                 </div>

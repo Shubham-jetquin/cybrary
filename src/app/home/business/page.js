@@ -1,4 +1,19 @@
+'use client';
+import { useRef,useEffect } from "react";
+import gsap from 'gsap';
 const business = () => {
+
+    const marqueeRef = useRef(null);
+
+    useEffect(() => {
+        gsap.to(marqueeRef.current, {
+            x: "-100%", // Moves the marquee to the left
+            duration: 10, // Speed of animation
+            repeat: -1, // Infinite loop
+            ease: "linear",
+        });
+    }, []);
+
     return <>
         <main className="main-wrapper">
             <section className="section_team-hero">
@@ -86,6 +101,7 @@ const business = () => {
                                 tr-marquee-speed={50}
                                 tr-marquee-element="component"
                                 className="logo-marquee_component no-margin-top"
+                                ref={marqueeRef}
                             >
                                 <div
                                     tr-marquee-element="panel"
@@ -96,6 +112,7 @@ const business = () => {
                                         scale: "none",
                                         transform: "translate(-73.6717%, 0%) translate3d(0px, 0px, 0px)"
                                     }}
+                                   
                                 >
                                     <div
                                         id="w-node-_41c259fd-7060-dc78-4543-9f04fdf51033-fdf51032"

@@ -277,7 +277,7 @@ const footer = () => {
                                     </div>
                                     <div className="show-mobile-portrait">
                                         <a
-                                            href="/business"
+                                            href="/home/business"
                                             className="login_teams-button w-inline-block"
                                         >
                                             <div>Cybrary for teams</div>
@@ -617,7 +617,7 @@ const footer = () => {
                                         </div>
                                     </div>
                                     <a
-                                        href="/cybrary-insider-pro"
+                                        href="/home/insidePro"
                                         className="footer_link w-inline-block"
                                     >
                                         <div>For Individuals</div>

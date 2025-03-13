@@ -6,7 +6,7 @@ const instructor = () => {
                 <div className="padding-global">
                     <div className="padding-section-150">
                         <div className="text-align-center">
-                            <div className="max-width-medium align-center">
+                            <div className="max-width-medium align-center" style={{display:'flex', flexDirection:'column'}}>
                                 <div className="margin-bottom margin-small">
                                     <h1 className="text-color-white">Meet Our Instructors</h1>
                                 </div>
